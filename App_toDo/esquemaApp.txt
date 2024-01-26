@@ -1,0 +1,17 @@
+Estructura HTML
+
+<h1>To do List
+
+<form> con un campo de texto para escribir nuevas tareas <input type="text">
+<button> para añadirlas
+
+<div> con id="" que muestre la lista de tareas
+
+cada tarea tendrá un texto que indica la tarea
+los elementos de entrada deben tener el atributo checked <input type="checkbox">
+icono trash que cuando clickemos borre las tareas
+
+JS
+
+
+

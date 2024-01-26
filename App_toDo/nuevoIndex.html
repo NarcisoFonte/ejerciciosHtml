@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App To do</title>
+</head>
+<body>
+    <!--Encabezado principal-->
+    <h1>To do list</h1>
+    <!--Formulario-->
+    <form action="#" id="formText"><!--action es la ruta de dónde vamos a enviar, como no vamos a enviarlo ponemos #-->
+        <input type="text" id="inputText" autofocus placeholder="Escribe tu tarea aquí..."><!--autofocus sirve para que cuando entremos en la app, no haga falta pinchar en el area de texto, podemos escribir directamente-->
+        <input type="submit" value="+" id="addTarea">
+    </form>
+    <!--Contenedor principal lista de tareas-->
+    <div id="containerListTask">
+        <!--Creamos las tareas-->
+        <div id="task">
+            <label><!--la etiqueta label sirve para la experiencia del usuario, que tenga que pinchar exactamente en el punto, amplía el área de click-->
+                <!--Creamos el checkbox-->
+                <input type="checkbox">
+                Tarea 1
+            </label>
+            <!--Insertamos la imagen-->
+            <img src="img/cubo-de-basura.png" id="trash">
+        </div>
+    </div>
+    <!--Añadimos un contenedor para las estádisticas-->
+    <div id="estadistica">
+        Tareas pendientes: 1    Tareas completadas: 2
+    </div>
+</body>
+</html>
