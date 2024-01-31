@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!--Encabezado de la página-->
+    <h1>To Do List</h1>
+    <!--Formulario para añadir tareas-->
+    <form action="#" id="userInput">
+        <input type="text" placeholder="Escribe tu tarea aquí..." autofocus>
+        <input type="submit" value="+" id="addBtn">
+    </form>
+    <!--Contenedor de la lista de tareas-->    
+    <div id="list" class="list-container">
+    <!--estos div los generamos automáticamente con js,
+        cada bloque div será una tarea-->
+        <!--
+        <div class="task-container" id="1">
+            <label>
+                <input type="checkbox">
+                Tarea 1
+            </label>
+            <img src="img/cubo-de-basura.png" class="close-btn">
+        </div>
+        -->
+    </div>
+    <!--Estadísticas de la lista de tareas-->
+    <div id="stats">
+        <!--Tareas pendientes: 5 Tareas completadas: 3-->
+    </div>
+    <!--Añadimos el footer-->
+    <footer>
+        <p>Desarrolo de Aplicaciones con Tecnología Web | Carlos Fonte | 31/01/2024</p>
+        <p id="fecha"></p>
+
+    </footer>
+    <!--Inclusión del archivo JavaScript que gestionará la funcionalidad de la lista de tareas comentada-->
+    <script src="js/toDo.js"></script>
+    <!--Script para obtener la fecha que se actualiza automáticamente-->
+    <script>
+        //Creamos el obejto para obtener la fecha actual.
+        let fechaActual = new Date();
+        //Seleccionamos el elemento que queremos modificar.
+        let fechaElemento = document.getElementById('fecha');
+        //Formato en el que queremos que se muestra la fecha.
+        //Con el operador ternario conseguimos que cuando el día/mes sea menor de 10, nos añada un 0 antes, para que el formato de la fecha sea 01/01/2024.
+        let formatoFecha = (fechaActual.getDate() <10 ? '0' : '') + fechaActual.getDate() + '/' + (fechaActual.getMonth() <10 ? '0' : '') + (fechaActual.getMonth() + 1) + '/' + fechaActual.getFullYear(); 
+        //Le asignamos la fecha al elemento.
+        fechaElemento.innerHTML = 'Fecha: ' + formatoFecha;
+    </script>
+</body>
+</html>
